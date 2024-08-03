@@ -1,0 +1,119 @@
+body {
+    background-color: aqua;
+    display: relative;
+}
+
+.event-grid-container {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    position: relative;
+    background-color: transparent;
+}
+
+.event-grid-container:last-child {
+    margin-bottom: 0px;
+}
+
+.event-inner {
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.event-grid-unit {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    font-family: inherit;
+}
+
+.left-unit {
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    flex: 1;
+    text-align: left;
+}
+
+.right-unit {
+    background-color: #ffffff;
+    font-size: .9rem;
+    color: inherit;
+    flex: 1;
+    text-align: left;
+
+}
+
+.event-flexbox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0px;
+}
+
+.event-overlay {
+    opacity: 0.0;
+}
+
+.event-img-body {
+    padding: 0px;
+    position: relative;
+}
+
+.event-img-holder {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    justify-content: center;
+    display: flex;
+}
+
+.event-img-holder img {
+    width: auto;
+    border-radius: 0px;
+    display: block;
+    height: auto;
+    align-self: flex-start;
+    max-width: 100%;
+}
+
+.event-info-body {
+    padding: 10px 20px;
+    position: relative;
+}
+
+.event-heading-block {
+    padding-top: 0px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+.event-info-block {
+    padding: 0px;
+    margin: 0px;
+}
+
+.event-info p {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    font: normal 400 1em "Poppins", sans-serif;
+}
+
+.event-info p:last-of-type {
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 550px) {
+    body {
+        background-color: blueviolet;
+    }
+
+    .event-grid-container {
+        margin: 20px 20px;
+    }
+
+    .event-flexbox {
+        flex-direction: column;
+    }
+}
