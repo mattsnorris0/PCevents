@@ -6,7 +6,6 @@ function getDate(timeStamp) {
 
 async function getEvents() {
 	  const url = "https://test-web-app-68qm.onrender.com/events";
-	// const url = "http://localhost:8000/events";
 	try {
 		const res = await fetch(url);
 		if (!res.ok) {
