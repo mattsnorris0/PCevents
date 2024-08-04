@@ -90,7 +90,7 @@
 }
 
 .event-heading {
-    font-weight:900;
+    font-weight:inherit;
 }
 
 .event-info p {
