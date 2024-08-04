@@ -24,13 +24,7 @@ async function addEvents() {
 		const parentDiv = document.getElementById("inner_2777848");
 		const childDiv = parentDiv.children[0];
 		for (const event of events) {
-			// const newDiv = document.createElement("p");
-			// newDiv.innerText = event.description;
-			  const newDiv = document.createElement("div");
-			//   const heading = document.createElement("h4");
-			//   const info = document.createElement("p");
-			//   heading.innerText = `${event.heading} | ${getDate(event.starts)}`;
-			//   info.innerText = event.description;
+			const newDiv = document.createElement("div");
 			newDiv.classList.add("event-grid-container");
 			newDiv.innerHTML +=
 				`<div class="event-inner">
