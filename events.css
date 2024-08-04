@@ -89,6 +89,10 @@
     margin: 0px;
 }
 
+.event-heading h4 {
+    font-weight:bold;
+}
+
 .event-info p {
     margin-bottom: 20px;
     line-height: 1.5em;
