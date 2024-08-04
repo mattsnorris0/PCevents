@@ -19,11 +19,13 @@ async function getEvents() {
 }
 
 async function addEvents() {
+	let eventName;
 	try {
 		const events = await getEvents();
 		const parentDiv = document.getElementById("inner_2777848");
 		const childDiv = parentDiv.children[0];
 		for (const event of events) {
+			eventName = `${event.name} | ${getDate(event.starts)}`;
 			const newDiv = document.createElement("div");
 			newDiv.classList.add("event-grid-container");
 			newDiv.innerHTML +=
@@ -44,7 +46,7 @@ async function addEvents() {
 								<div class="event-info-body">
 									<div class="event-heading-block">
 										<div class="heading-hold a-inherit ma-inherit">
-											<h4 class="rtedit h event-heading"><strong></strong></h4>
+											<h4 class="rtedit h event-heading"><strong>${eventName}</strong></h4>
 										</div>
 									</div>
 									<div class="event-info-block">
@@ -59,10 +61,8 @@ async function addEvents() {
 			childDiv.appendChild(newDiv);
 		}
 		const info = document.querySelectorAll(".event-info");
-		const heading = document.querySelectorAll(".event-heading");
 		for (let i = 0; i< info.length; i++) {
 			info[i].innerText = events[i].description;
-			heading[i].innerText = `${events[i].name} | ${getDate(events[i].starts)}`;
 		}
 	} catch (err) {
 		console.error(err);
