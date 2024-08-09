@@ -54,9 +54,6 @@
     background-color: #9fa9a3;
     cursor: pointer;
     transition: 300ms;
-}
-
-.event-btn>a {
     text-decoration: none;
     color: white;
 }
