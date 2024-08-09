@@ -22,47 +22,41 @@ async function addEvents() {
 	let eventName;
 	try {
 		const events = await getEvents();
-		const parentDiv = document.getElementById("inner_2777848");
-		const childDiv = parentDiv.children[0];
+		const parentDiv = document.getElementById("events");
 		for (const event of events) {
 			eventName = `${event.name} | ${getDate(event.starts)}`;
 			const newDiv = document.createElement("div");
 			newDiv.classList.add("event-grid-container");
 			newDiv.innerHTML +=
-				`<div class="event-inner">
-						<div class="event-flexbox">
-							<div class="event-grid-unit left-unit lazyloaded">
-								<div class="event-overlay"></div>
-								<div class="event-img-body">
-									<div class="image-block center m-inherit">
-										<div class="event-img-holder">
-										<img src=${event.image} loading="lazy" alt=“event “graphic>
-										</div>
-									</div>
+				`<div class="event-flexbox">
+					<img src=${event.image} loading="lazy" alt=“event graphic">	
+					<div class="event-grid-unit lazyloaded">
+						<div class="event-info-cont">
+							<div class="event-heading-block">
+								<div class="heading-hold a-inherit ma-inherit">
+									<h4 class="rtedit h event-heading"><strong>${eventName}</strong></h4>
 								</div>
 							</div>
-							<div class="event-grid-unit right-unit lazyloaded">
-								<div class="event-overlay"></div>
-								<div class="event-info-body">
-									<div class="event-heading-block">
-										<div class="heading-hold a-inherit ma-inherit">
-											<h4 class="rtedit h event-heading"><strong>${eventName}</strong></h4>
-										</div>
-									</div>
-									<div class="event-info-block">
-										<div class="rtedit">
-											<p class="event-info"></p>
-										</div>
-									</div>
-								</div>
+							<div class="event-info-block">
+								<p class="event-info"></p>
 							</div>
 						</div>
-					</div>`
-			childDiv.appendChild(newDiv);
+					</div>
+				</div>`
+			parentDiv.appendChild(newDiv);
 		}
-		const info = document.querySelectorAll(".event-info");
-		for (let i = 0; i< info.length; i++) {
+		for (let i = 0; i< events.length; i++) {
+            const info = document.querySelectorAll(".event-info");
+            const div = document.querySelectorAll(".event-grid-unit");
 			info[i].innerText = events[i].description;
+            console.log(events[i].registration);
+            if(events[i].registration !== null) {
+                const btn = document.createElement("a");
+                btn.classList.add("event-btn");
+				btn.href = events[i].registration;
+                btn.innerText = "Register";
+                div[i].appendChild(btn);
+            }
 		}
 	} catch (err) {
 		console.error(err);
