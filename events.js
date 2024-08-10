@@ -62,6 +62,4 @@ async function addEvents() {
 	}
 }
 
-setTimeout(() => {
-	addEvents();
-}, 500);
+addEvents();
