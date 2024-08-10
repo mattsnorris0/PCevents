@@ -52,7 +52,7 @@ async function addEvents() {
             if(events[i].registration !== null) {
                 const btn = document.createElement("a");
                 btn.classList.add("event-btn");
-				btn.href = events[i].registration;
+		        btn.href = events[i].registration;
                 btn.innerText = "Register";
                 div[i].appendChild(btn);
             }
