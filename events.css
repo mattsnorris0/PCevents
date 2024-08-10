@@ -46,22 +46,6 @@
     font-weight: 900;
 }
 
-.event-btn {
-    align-self: center;
-    padding: .5rem 1rem;
-    border-radius: 12px;
-    border: none;
-    background-color: #9fa9a3;
-    cursor: pointer;
-    transition: 300ms;
-    text-decoration: none;
-    color: white;
-}
-
-.event-btn:hover {
-    background-color: #7c837f;
-}
-
 @media only screen and (max-width: 550px) {
     .event-grid-container {
          margin: 20px 20px;
@@ -74,9 +58,5 @@
      .event-flexbox img {
         max-width: 100%;
         height: auto;
-     }
-
-     .event-btn {
-        margin: 1rem 0 0 0;
      }
  }
