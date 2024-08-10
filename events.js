@@ -49,7 +49,6 @@ async function addEvents() {
             const info = document.querySelectorAll(".event-info");
             const div = document.querySelectorAll(".event-grid-unit");
 			info[i].innerText = events[i].description;
-            console.log(events[i].registration);
             if(events[i].registration !== null) {
                 const btn = document.createElement("a");
                 btn.classList.add("event-btn");
