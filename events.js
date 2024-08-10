@@ -51,7 +51,7 @@ async function addEvents() {
 			info[i].innerText = events[i].description;
             if(events[i].registration !== null) {
                 const btn = document.createElement("a");
-                btn.classList.add("btn", "main");
+                btn.classList.add("btn", "main", "event-btn");
 		        btn.href = events[i].registration;
                 btn.innerText = "Register";
                 div[i].appendChild(btn);
