@@ -5,7 +5,7 @@
 }
 
 async function getEvents() {
-	  const url = "https://test-web-app-68qm.onrender.com/events";
+	  const url = "https://webapi--soma-church-web-app.us-central1.hosted.app/events";
 	try {
 		const res = await fetch(url);
 		if (!res.ok) {
